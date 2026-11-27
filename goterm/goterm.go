@@ -520,10 +520,6 @@ func main() {
 			}
 		}
 
-		if (cc.Port != -1 || cc.Loopback) && cc.Baud == int64(defaultBaud) {
-			cc.Baud = 10000000000
-		}
-
 		ok := true
 		if cc.Loopback {
 			toLogConsole <- "goterm: LOOPBACK MODE"
